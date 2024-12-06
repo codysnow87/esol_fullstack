@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     try {
         const { userId, topic } = await req.json();
 
-        if (!userId || !topic) { // TODO: topic validation needed
+        if (!userId || !topic) { // TODO: build topic validation component
             return NextResponse.json({ error: 'Missing userId or topic' }, { status: 400 });
         }
 
